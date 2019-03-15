@@ -1,0 +1,32 @@
+{
+    "name": "jeje/pay",
+    "description": "This is jeje pay demo",
+    "type": "library",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JeJe",
+            "email": "jejezhang@outlook.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.8.x-dev",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jeje\\Pay": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jeje\\Pay\\PayServiceProvider"
+            ],
+            "aliases":{
+                "Pay":"Jeje\\Pay\\Facades\\Pay"
+            }
+        }
+    }
+}
