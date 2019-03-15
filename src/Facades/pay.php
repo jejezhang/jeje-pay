@@ -4,7 +4,7 @@ namespace Jeje\Pay\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Family extends Facade
+class Pay extends Facade
 {
     /**
      * Get the registered name of the component.
