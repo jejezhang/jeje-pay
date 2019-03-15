@@ -11,6 +11,6 @@ class Pay
 
     public function say ()
     {
-        echo 'This is Jeje Pay Demo<br/>';
+        echo 'This Is Jeje Pay Demo<br/>';
     }
 }
