@@ -15,7 +15,7 @@ class PayServiceProvider extends ServiceProvider
      */
     public function boot ()
     {
-        $source = $source = realpath($raw = $this->getConfigFile()) ?: $raw;
+        $source = realpath($raw = $this->getConfigFile()) ?: $raw;
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([
@@ -36,7 +36,7 @@ class PayServiceProvider extends ServiceProvider
      */
     public function register ()
     {
-        $source = $source = realpath($raw = $this->getConfigFile()) ?: $raw;
+        $source = realpath($raw = $this->getConfigFile()) ?: $raw;
         $this->mergeConfigFrom($source, 'pay');
 
         $this->app->singleton('pay', function () {
@@ -49,6 +49,6 @@ class PayServiceProvider extends ServiceProvider
      */
     protected function getConfigFile ()
     {
-        return __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'pay.php';
+        return dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'pay.php';
     }
 }
