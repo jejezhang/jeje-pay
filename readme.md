@@ -4,4 +4,4 @@
 
 ##### MIT
 
-#### Install composer require jeje/pay
+#### Install composer require jeje/pay v1.0.1
