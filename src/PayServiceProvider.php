@@ -26,7 +26,7 @@ class PayServiceProvider extends ServiceProvider
             $this->app->configure('pay');
         }
 
-        $this->mergeConfigFrom($source, 'pay');
+
     }
 
     /**
@@ -36,7 +36,8 @@ class PayServiceProvider extends ServiceProvider
      */
     public function register ()
     {
-        //
+        $source = $source = realpath($raw = $this->getConfigFile()) ?: $raw;
+        $this->mergeConfigFrom($source, 'pay');
 
         $this->app->singleton('pay', function () {
             return new Pay();
